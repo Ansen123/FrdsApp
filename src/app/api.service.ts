@@ -11,4 +11,8 @@ viewFrds=()=>{
   return this.http.get("http://dummyapifriends.herokuapp.com/view")
 }
 
+addFrds=(data:any)=>{
+  return this.http.post("https://dummyapifriends.herokuapp.com/adddata",data)
+}
+
 }
