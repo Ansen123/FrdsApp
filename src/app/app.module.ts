@@ -7,6 +7,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AddFriendsComponent } from './add-friends/add-friends.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ViewFriendsComponent } from './view-friends/view-friends.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 const appRoutes:Routes=[
   {
     path:"",component:AddFriendsComponent
@@ -25,7 +27,9 @@ const appRoutes:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

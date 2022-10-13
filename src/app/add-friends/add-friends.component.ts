@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-add-friends',
@@ -7,7 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddFriendsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private myapi:ApiService) { }
+  id=""
+  name=""
+  friendName=""
+  friendNickName=""
+  DescribeYourFriend=""
+  readValues=()=>{
+  let data={
+"id":this.id,
+"name":this.name,
+"friendName":this.friendName,
+"friendNickName":this.friendNickName,
+"DescribeYourFriend":this.DescribeYourFriend
+}
+console.log(data);
+this.myapi.addFrds(data).subscribe(
+  (response)=>{
+    console.log(response)
+    alert("Success")
+  }
+)
+
+
+  }
 
   ngOnInit(): void {
   }

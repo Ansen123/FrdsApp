@@ -7,26 +7,26 @@
             <div class="row g-3">
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="">ID</label>
-                    <input type="" class="form-control">
+                    <input type="" class="form-control" name="id"[(ngModel)]="id">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="">Name</label>
-                    <input type="" class="form-control">
+                    <input type="" class="form-control"  name="name"[(ngModel)]="name">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="">Friend Name</label>
-                    <input type="" class="form-control">
+                    <input type="" class="form-control"  name="friendName"[(ngModel)]="friendName">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="">friendNickName</label>
-                    <input type="" class="form-control">
+                    <input type="" class="form-control"  name="friendNickName"[(ngModel)]="friendNickName">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="">DescribeYourFriend"</label>
-                    <input type="" class="form-control">
+                    <input type="" class="form-control" name="DescribeYourFriend"[(ngModel)]="DescribeYourFriend">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <button class="btn btn-dark" >Submit</button>
+                    <button class="btn btn-dark" (click)="readValues()">Submit</button>
                 </div>
                 
             </div>
